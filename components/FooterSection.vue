@@ -4,10 +4,10 @@
       <div class="footer-grid">
         <!-- Brand Column -->
         <div class="footer-brand">
-          <a href="#" class="logo">
+          <NuxtLink to="/" class="logo">
             <span class="logo-icon">⬡</span>
             <span class="logo-text">ORICODE<span class="logo-ai">AI</span></span>
-          </a>
+          </NuxtLink>
           <p>AI-powered coding assistant for SAP ABAP developers. Built with ❤️ for the SAP community.</p>
           <div class="social-links">
             <a href="https://github.com/Teddy-Layani" target="_blank" aria-label="GitHub">
@@ -47,8 +47,8 @@
         <div class="footer-column">
           <h4>Legal</h4>
           <ul>
-            <li><a href="/privacy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms of Service</a></li>
+            <li><NuxtLink to="/privacy">Privacy Policy</NuxtLink></li>
+            <li><NuxtLink to="/terms">Terms of Service</NuxtLink></li>
             <li><a href="mailto:support@oricode.ai">Contact</a></li>
           </ul>
         </div>
@@ -143,13 +143,15 @@ const currentYear = new Date().getFullYear()
   gap: 0.75rem;
 }
 
-.footer-column a {
+.footer-column a,
+.footer-column :deep(a) {
   font-size: 0.95rem;
   color: var(--slate-400);
   transition: color var(--transition-fast);
 }
 
-.footer-column a:hover {
+.footer-column a:hover,
+.footer-column :deep(a):hover {
   color: var(--slate-100);
 }
 
