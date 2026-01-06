@@ -10,14 +10,14 @@
           <p>Join thousands of SAP developers already using Oricode AI.<br>Start for free, no credit card required.</p>
           
           <div class="cta-buttons">
-            <a href="/signup" class="btn btn-primary btn-large">
+            <a href="https://app.oricode.ai/signup" class="btn btn-primary btn-large">
               Get Started Free
               <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <a href="/demo" class="btn btn-secondary btn-large">
-              Schedule Demo
+            <a href="/downloads/oricode-ai-plugin.zip" class="btn btn-secondary btn-large">
+              Download Plugin
             </a>
           </div>
           

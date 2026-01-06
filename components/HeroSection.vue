@@ -25,17 +25,19 @@
       
       <!-- CTA Buttons -->
       <div class="hero-buttons fade-in-up" style="animation-delay: 0.3s">
-        <a href="/signup" class="btn btn-primary">
+        <a href="https://app.oricode.ai/signup" class="btn btn-primary">
           <span>Get Started Free</span>
           <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
         </a>
-        <a href="#demo" class="btn btn-secondary">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M8 5v14l11-7z"/>
+        <a href="/downloads/oricode-ai-plugin.zip" class="btn btn-secondary">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7,10 12,15 17,10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          <span>Watch Demo</span>
+          <span>Download Plugin</span>
         </a>
       </div>
       

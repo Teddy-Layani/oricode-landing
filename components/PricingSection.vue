@@ -63,7 +63,7 @@
           <h3>🏢 Need more?</h3>
           <p>Enterprise plans with unlimited usage, SSO, dedicated support, and on-premise deployment.</p>
         </div>
-        <a href="/contact" class="btn btn-secondary">Contact Sales</a>
+        <a href="mailto:support@oricode.ai?subject=Enterprise%20Inquiry" class="btn btn-secondary">Contact Sales</a>
       </div>
     </div>
   </section>
@@ -82,7 +82,7 @@ const plans = [
     annualPrice: 0,
     badge: null,
     featured: false,
-    cta: { text: 'Get Started', href: '/signup' },
+    cta: { text: 'Get Started', href: 'https://app.oricode.ai/signup' },
     features: [
       '100 messages/month',
       'Claude Haiku model',
@@ -99,7 +99,7 @@ const plans = [
     annualPrice: 15,
     badge: 'Most Popular',
     featured: true,
-    cta: { text: 'Start Pro Trial', href: '/signup?plan=pro' },
+    cta: { text: 'Start Pro Trial', href: 'https://app.oricode.ai/signup?plan=pro' },
     features: [
       '2,000 messages/month',
       'All Claude models',
@@ -116,7 +116,7 @@ const plans = [
     annualPrice: 31,
     badge: null,
     featured: false,
-    cta: { text: 'Start Team Trial', href: '/signup?plan=team' },
+    cta: { text: 'Start Team Trial', href: 'https://app.oricode.ai/signup?plan=team' },
     features: [
       '5,000 messages/user/month',
       'All Claude models',

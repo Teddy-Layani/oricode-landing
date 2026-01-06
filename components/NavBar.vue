@@ -12,13 +12,13 @@
         <a href="#features" @click="menuOpen = false">Features</a>
         <a href="#how-it-works" @click="menuOpen = false">How It Works</a>
         <a href="#pricing" @click="menuOpen = false">Pricing</a>
-        <a href="https://docs.oricode.ai" target="_blank">Docs</a>
+        <a href="/downloads/oricode-ai-plugin.zip">Download</a>
       </div>
       
       <!-- CTA Buttons -->
       <div class="nav-actions">
-        <a href="/login" class="btn-login">Sign In</a>
-        <a href="/signup" class="btn btn-primary btn-small">Get Started Free</a>
+        <a href="https://app.oricode.ai/login" class="btn-login">Sign In</a>
+        <a href="https://app.oricode.ai/signup" class="btn btn-primary btn-small">Get Started Free</a>
       </div>
       
       <!-- Mobile Menu Toggle -->
