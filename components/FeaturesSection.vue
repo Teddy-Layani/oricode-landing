@@ -61,7 +61,6 @@ const features = [
     title: 'Chat History',
     description: 'Never lose a conversation. All chats are saved and searchable in the cloud.',
     gradient: 'linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1))',
-    comingSoon: true,
     items: [
       'Persistent conversations',
       'Resume anytime',

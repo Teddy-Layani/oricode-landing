@@ -71,7 +71,7 @@ const plans = [
       '100 credits/month',
       'Claude Haiku model',
       'Basic MCP tools (read-only)',
-      '⏳ Chat history',
+      'Chat history',
       '✗ All Claude models',
       '✗ Full MCP tools'
     ]
@@ -87,7 +87,7 @@ const plans = [
       '2,000 credits/month',
       'All Claude models',
       'Full MCP tools (CRUD)',
-      '⏳ Unlimited chat history',
+      'Unlimited chat history',
       'Prompt caching (90% savings)'
     ]
   },
@@ -102,7 +102,7 @@ const plans = [
       '5,000 credits/month',
       'All Claude models',
       'Full MCP tools (CRUD)',
-      '⏳ Unlimited chat history',
+      'Unlimited chat history',
       'Prompt caching (90% savings)'
     ]
   }
