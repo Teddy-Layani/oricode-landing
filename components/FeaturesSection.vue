@@ -7,11 +7,14 @@
       </div>
       
       <div class="features-grid">
-        <div class="feature-card card" v-for="feature in features" :key="feature.title">
+        <div :class="['feature-card', 'card', { 'coming-soon': feature.comingSoon }]" v-for="feature in features" :key="feature.title">
           <div class="feature-icon" :style="{ background: feature.gradient }">
             {{ feature.icon }}
           </div>
-          <h3>{{ feature.title }}</h3>
+          <div class="feature-header">
+            <h3>{{ feature.title }}</h3>
+            <span v-if="feature.comingSoon" class="coming-soon-badge">Coming Soon</span>
+          </div>
           <p>{{ feature.description }}</p>
           <ul class="feature-list">
             <li v-for="item in feature.items" :key="item">
@@ -58,6 +61,7 @@ const features = [
     title: 'Chat History',
     description: 'Never lose a conversation. All chats are saved and searchable in the cloud.',
     gradient: 'linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1))',
+    comingSoon: true,
     items: [
       'Persistent conversations',
       'Resume anytime',
@@ -94,6 +98,7 @@ const features = [
     title: 'Enterprise Ready',
     description: 'Built for enterprise security requirements with local processing options.',
     gradient: 'linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(251, 191, 36, 0.1))',
+    comingSoon: true,
     items: [
       'API key authentication',
       'Usage analytics',
@@ -131,8 +136,30 @@ const features = [
   font-size: 1.75rem;
 }
 
+.feature-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
 .feature-card h3 {
   color: var(--slate-100);
+  margin: 0;
+}
+
+.coming-soon-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  background: rgba(255, 107, 53, 0.2);
+  color: var(--orange-500);
+  border-radius: 4px;
+}
+
+.feature-card.coming-soon {
+  opacity: 0.85;
+  border: 1px dashed var(--orange-500);
 }
 
 .feature-card p {
