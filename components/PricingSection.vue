@@ -95,9 +95,9 @@ const plans = [
     name: 'Enterprise',
     description: 'For teams & companies',
     price: 99,
-    badge: 'Coming Soon',
+    badge: null,
     featured: false,
-    cta: { text: 'Contact Sales', href: 'mailto:support@oricode.ai?subject=Enterprise%20Inquiry' },
+    cta: { text: 'Start Enterprise Trial', href: 'https://app.oricode.ai/signup?plan=enterprise' },
     features: [
       '5,000 credits/month',
       'All Claude models',
