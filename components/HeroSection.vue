@@ -31,14 +31,35 @@
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
         </a>
-        <a href="/downloads/oricode-ai-plugin.zip" class="btn btn-secondary">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-            <polyline points="7,10 12,15 17,10"/>
-            <line x1="12" y1="15" x2="12" y2="3"/>
-          </svg>
-          <span>Download Plugin</span>
-        </a>
+        <div class="download-dropdown">
+          <button class="btn btn-secondary dropdown-trigger" @click="showDownloads = !showDownloads">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7,10 12,15 17,10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            <span>Download</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" :class="{ 'rotate': showDownloads }">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div v-show="showDownloads" class="download-menu">
+            <a href="/downloads/oricode-ai-1.0.0.vsix" class="download-item">
+              <div class="download-icon">💻</div>
+              <div class="download-info">
+                <strong>VS Code Extension</strong>
+                <small>Recommended for web/frontend projects</small>
+              </div>
+            </a>
+            <a href="/downloads/oricode-ai-plugin.zip" class="download-item">
+              <div class="download-icon">☕</div>
+              <div class="download-info">
+                <strong>Eclipse Plugin</strong>
+                <small>For ABAP development in Eclipse ADT</small>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
       
       <!-- Stats -->
@@ -104,6 +125,9 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+
+const showDownloads = ref(false)
 </script>
 
 <style scoped>
@@ -324,21 +348,88 @@
   color: var(--purple-500);
 }
 
+/* Download Dropdown */
+.download-dropdown {
+  position: relative;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dropdown-trigger svg.rotate {
+  transform: rotate(180deg);
+}
+
+.download-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--slate-800);
+  border: 1px solid var(--slate-700);
+  border-radius: 12px;
+  padding: 0.5rem;
+  min-width: 280px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+
+.download-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 150ms ease;
+}
+
+.download-item:hover {
+  background: var(--slate-700);
+}
+
+.download-icon {
+  font-size: 1.5rem;
+}
+
+.download-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.download-info strong {
+  color: var(--slate-100);
+  font-size: 0.9rem;
+}
+
+.download-info small {
+  color: var(--slate-400);
+  font-size: 0.75rem;
+}
+
 @media (max-width: 768px) {
   .hero {
     padding-top: 80px;
   }
-  
+
   .hero-stats {
     flex-wrap: wrap;
   }
-  
+
   .stat-divider {
     display: none;
   }
-  
+
   .ide-sidebar {
     display: none;
+  }
+
+  .download-menu {
+    min-width: 240px;
   }
 }
 </style>

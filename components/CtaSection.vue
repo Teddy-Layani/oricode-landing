@@ -16,8 +16,23 @@
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </a>
-            <a href="/downloads/oricode-ai-plugin.zip" class="btn btn-secondary btn-large">
-              Download Plugin
+          </div>
+
+          <!-- Download Options -->
+          <div class="download-options">
+            <a href="/downloads/oricode-ai-1.0.0.vsix" class="download-card">
+              <span class="download-icon">💻</span>
+              <div class="download-info">
+                <strong>VS Code Extension</strong>
+                <small>For web & frontend projects</small>
+              </div>
+            </a>
+            <a href="/downloads/oricode-ai-plugin.zip" class="download-card">
+              <span class="download-icon">☕</span>
+              <div class="download-info">
+                <strong>Eclipse Plugin</strong>
+                <small>For ABAP in Eclipse ADT</small>
+              </div>
             </a>
           </div>
           
@@ -101,15 +116,70 @@
   color: var(--slate-400);
 }
 
+/* Download Options */
+.download-options {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.download-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--slate-800);
+  border: 1px solid var(--slate-700);
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 150ms ease;
+}
+
+.download-card:hover {
+  border-color: var(--orange-500);
+  background: var(--slate-700);
+}
+
+.download-card .download-icon {
+  font-size: 1.5rem;
+}
+
+.download-card .download-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.download-card .download-info strong {
+  color: var(--slate-100);
+  font-size: 0.9rem;
+}
+
+.download-card .download-info small {
+  color: var(--slate-400);
+  font-size: 0.75rem;
+}
+
 @media (max-width: 768px) {
   .cta-card {
     padding: 2.5rem 1.5rem;
   }
-  
+
   .cta-buttons {
     flex-direction: column;
   }
-  
+
+  .download-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .download-card {
+    width: 100%;
+    max-width: 280px;
+  }
+
   .cta-features {
     flex-direction: column;
     gap: 0.5rem;
