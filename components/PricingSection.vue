@@ -28,14 +28,19 @@
           </a>
 
           <ul class="plan-features">
-            <li v-for="feature in plan.features" :key="feature" :class="{ disabled: feature.startsWith('✗') }">
-              <svg v-if="!feature.startsWith('✗')" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <li v-for="feature in plan.features" :key="feature" :class="{ disabled: feature.startsWith('✗'), upcoming: feature.startsWith('⏳') }">
+              <svg v-if="!feature.startsWith('✗') && !feature.startsWith('⏳')" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
                 <path d="M20 6L9 17l-5-5"/>
+              </svg>
+              <svg v-else-if="feature.startsWith('⏳')" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
               </svg>
               <svg v-else width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 6L6 18M6 6l12 12"/>
               </svg>
-              {{ feature.replace('✗ ', '') }}
+              {{ feature.replace('✗ ', '').replace('⏳ ', '') }}
+              <span v-if="feature.startsWith('⏳')" class="coming-soon-badge">Coming Soon</span>
             </li>
           </ul>
         </div>
@@ -66,7 +71,7 @@ const plans = [
       '100 credits/month',
       'Claude Haiku model',
       'Basic MCP tools (read-only)',
-      'Chat history (7 days)',
+      '⏳ Chat history',
       '✗ All Claude models',
       '✗ Full MCP tools'
     ]
@@ -82,7 +87,7 @@ const plans = [
       '2,000 credits/month',
       'All Claude models',
       'Full MCP tools (CRUD)',
-      'Unlimited chat history',
+      '⏳ Unlimited chat history',
       'Prompt caching (90% savings)'
     ]
   },
@@ -90,14 +95,14 @@ const plans = [
     name: 'Enterprise',
     description: 'For teams & companies',
     price: 99,
-    badge: null,
+    badge: 'Coming Soon',
     featured: false,
-    cta: { text: 'Start Enterprise Trial', href: 'https://app.oricode.ai/signup?plan=enterprise' },
+    cta: { text: 'Contact Sales', href: 'mailto:support@oricode.ai?subject=Enterprise%20Inquiry' },
     features: [
       '5,000 credits/month',
       'All Claude models',
       'Full MCP tools (CRUD)',
-      'Unlimited chat history',
+      '⏳ Unlimited chat history',
       'Prompt caching (90% savings)'
     ]
   }
@@ -221,6 +226,24 @@ const plans = [
 
 .plan-features li.disabled svg {
   color: var(--slate-700);
+}
+
+.plan-features li.upcoming {
+  color: var(--orange-400);
+}
+
+.plan-features li.upcoming svg {
+  color: var(--orange-500);
+}
+
+.coming-soon-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  background: rgba(255, 107, 53, 0.2);
+  color: var(--orange-500);
+  border-radius: 4px;
+  margin-left: 0.5rem;
 }
 
 .enterprise-cta {
