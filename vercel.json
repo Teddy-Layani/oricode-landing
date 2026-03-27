@@ -1,1 +1,4 @@
-{ "installCommand": "npm install --ignore-scripts && npx nuxt prepare", "buildCommand": "nuxt build" }
+{
+  "installCommand": "npm install --ignore-scripts && chmod +x node_modules/.bin/* && node_modules/.bin/nuxt prepare",
+  "buildCommand": "node_modules/.bin/nuxt build"
+}
