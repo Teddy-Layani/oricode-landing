@@ -84,7 +84,7 @@ const plans = [
     featured: true,
     cta: { text: 'Start Pro Trial', href: 'https://app.oricode.ai/signup?plan=pro' },
     features: [
-      '2,000 credits/month',
+      '1,500 credits/month',
       'All Claude models',
       'Full MCP tools (CRUD)',
       'Unlimited chat history',
