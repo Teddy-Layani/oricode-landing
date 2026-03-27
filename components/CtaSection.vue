@@ -20,6 +20,7 @@
 
           <!-- Download Options -->
           <div class="download-options">
+            <!-- VS Code Extension - hidden until ready
             <a href="/downloads/oricode-ai-1.0.0.vsix" class="download-card">
               <span class="download-icon">💻</span>
               <div class="download-info">
@@ -27,11 +28,12 @@
                 <small>For web & frontend projects</small>
               </div>
             </a>
+            -->
             <a href="/downloads/oricode-ai-plugin.zip" class="download-card">
               <span class="download-icon">☕</span>
               <div class="download-info">
                 <strong>Eclipse Plugin</strong>
-                <small>For ABAP in Eclipse ADT</small>
+                <small>AI-powered ABAP in Eclipse ADT</small>
               </div>
             </a>
           </div>

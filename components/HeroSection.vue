@@ -44,6 +44,7 @@
             </svg>
           </button>
           <div v-show="showDownloads" class="download-menu">
+            <!-- VS Code Extension - hidden until ready
             <a href="/downloads/oricode-ai-1.0.0.vsix" class="download-item">
               <div class="download-icon">💻</div>
               <div class="download-info">
@@ -51,11 +52,12 @@
                 <small>Recommended for web/frontend projects</small>
               </div>
             </a>
+            -->
             <a href="/downloads/oricode-ai-plugin.zip" class="download-item">
               <div class="download-icon">☕</div>
               <div class="download-info">
                 <strong>Eclipse Plugin</strong>
-                <small>For ABAP development in Eclipse ADT</small>
+                <small>AI-powered ABAP development in Eclipse ADT</small>
               </div>
             </a>
           </div>
