@@ -1,0 +1,1 @@
+{ "installCommand": "npm install --ignore-scripts && npx nuxt prepare", "buildCommand": "nuxt build" }
