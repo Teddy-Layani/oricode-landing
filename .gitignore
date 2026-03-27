@@ -41,3 +41,5 @@ coverage/
 
 # TypeScript cache
 *.tsbuildinfo
+.vercel
+.env*.local
