@@ -64,6 +64,20 @@
         </div>
       </div>
       
+      <!-- Demo Video -->
+      <div class="hero-video fade-in-up" style="animation-delay: 0.4s; margin-top: 2rem; width: 100%; max-width: 800px;">
+        <iframe
+          width="100%"
+          height="450"
+          src="https://www.youtube.com/embed/AHQzY3-XCCQ"
+          title="Oricode AI Demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0, 212, 170, 0.15);">
+        </iframe>
+      </div>
+
       <!-- Stats -->
       <div class="hero-stats fade-in-up" style="animation-delay: 0.4s">
         <div class="stat">
