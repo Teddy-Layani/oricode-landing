@@ -47,7 +47,7 @@
           
           <h3>4.1 Plans and Pricing</h3>
           <p>
-            We offer various subscription plans (Free, Pro, Team, Enterprise). 
+            We offer various subscription plans (Free, Pro, Enterprise). 
             Pricing and features are subject to change with notice.
           </p>
           

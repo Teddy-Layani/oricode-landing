@@ -64,7 +64,7 @@
           <ul>
             <li><strong>Anthropic</strong> - AI processing (Claude API)</li>
             <li><strong>Stripe</strong> - Payment processing</li>
-            <li><strong>Supabase</strong> - Database hosting</li>
+            <li><strong>Railway</strong> - Application and database hosting</li>
             <li><strong>Railway/Vercel</strong> - Application hosting</li>
           </ul>
           <p>We do not sell your personal information to third parties.</p>
@@ -87,8 +87,8 @@
           <h2>6. Data Retention</h2>
           <p>
             We retain your data for as long as your account is active. Chat history 
-            is retained according to your subscription plan (7 days for Free, unlimited 
-            for Pro/Team). You can request deletion of your data at any time.
+            is retained according to your subscription plan (7 days for Free, unlimited
+            for Pro/Enterprise). You can request deletion of your data at any time.
           </p>
         </section>
         
