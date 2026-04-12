@@ -97,7 +97,7 @@ const features = [
     title: 'Enterprise Ready',
     description: 'Built for enterprise security requirements with local processing options.',
     gradient: 'linear-gradient(135deg, rgba(251, 191, 36, 0.2), rgba(251, 191, 36, 0.1))',
-    comingSoon: true,
+    comingSoon: false,
     items: [
       'API key authentication',
       'Usage analytics',
