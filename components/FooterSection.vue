@@ -5,8 +5,7 @@
         <!-- Brand Column -->
         <div class="footer-brand">
           <NuxtLink to="/" class="logo">
-            <span class="logo-icon">⬡</span>
-            <span class="logo-text">ORICODE<span class="logo-ai">AI</span></span>
+            <img src="/oricode-logo.svg" alt="Oricode AI" style="height: 32px; width: auto;" />
           </NuxtLink>
           <p>AI-powered coding assistant for SAP ABAP developers. Built with ❤️ for the SAP community.</p>
         </div>

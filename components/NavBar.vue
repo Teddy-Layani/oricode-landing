@@ -3,8 +3,7 @@
     <div class="container navbar-content">
       <!-- Logo -->
       <a href="#" class="logo">
-        <span class="logo-icon">⬡</span>
-        <span class="logo-text">ORICODE<span class="logo-ai">AI</span></span>
+        <img src="/oricode-logo.svg" alt="Oricode AI" class="logo-img" />
       </a>
       
       <!-- Desktop Nav -->
@@ -75,23 +74,11 @@ onUnmounted(() => {
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-  font-size: 1.25rem;
 }
 
-.logo-icon {
-  font-size: 1.75rem;
-  color: var(--orange-500);
-  animation: pulse 2s ease-in-out infinite;
-}
-
-.logo-text {
-  letter-spacing: 0.1em;
-}
-
-.logo-ai {
-  color: var(--orange-500);
+.logo-img {
+  height: 36px;
+  width: auto;
 }
 
 .nav-links {
